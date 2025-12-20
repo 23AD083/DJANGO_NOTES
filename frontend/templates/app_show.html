@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table>
+<thead>
+    <tr>
+        <th>name</th>
+        <th>description</th>
+        <th> delete </th>
+        <th> update </th>   
+    </tr>
+</thead>
+<tbody>
+    {% for obj in data %}
+    <tr>
+        <td>{{ obj.name }}</td>
+        <td>{{ obj.description }}</td>
+        <td><button><a href="/mainapp/deleteproduct/{{ obj.id }}/" style="text-decoration: none;">delete</a></button> </td>
+        <td> <button><a href="/mainapp/updateproduct/{{ obj.id }}/" style="text-decoration: none;">update</a></button> </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

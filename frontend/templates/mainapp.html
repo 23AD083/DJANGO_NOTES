@@ -1,0 +1,13 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1> mainapp adding  page </h1>
+   <p> This is the mainapp page content. </p>
+   <form  action=" " method ="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" value ="add product">Submit</button>
+   </form>
+{% endblock %}
